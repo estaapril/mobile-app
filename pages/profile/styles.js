@@ -2,33 +2,45 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    paddingInline: "1rem",
-    paddingBlock: "2rem",
+    flex: 1,
+    backgroundColor: '#fff',
   },
-  header: {
-    fontSize: 14,
+  columnContainer: {
+
+  },
+  scrollContainer: {
+    backgroundColor: '#fff',
+  },
+  header: {   // for current openings
+    fontSize: 20,
     color: "#000",
     textTransform: "capitalize",
     fontWeight: "bold",
-    paddingTop: 20,
+    paddingTop: 60,
   },
-  subHeader: {
-    fontSize: 11,
+  subHeader: {  // job decription (home based, hybrid)
+    fontSize: 13,
     color: "#000",
-    textTransform: "capitalize",
+    textTransform: "uppercase",
   },
   brand: {
-    height: 52,
-    width: "100%",
-    resizeMode: "contain", // This is equivalent to objectFit: cover
-    alignItems: "center",
-    justifyContent: "center",
-    // borderWidth: 1,
+    // height: 75,
+    // width: "100%",
+    // resizeMode: "contain", // This is equivalent to objectFit: cover
+    // alignItems: "center",
+    // justifyContent: "center",
+    top: 50,
+        height: 100,
+        width: 'auto',
+        resizeMode: "contain", 
+        alignItems: "center",
+        justifyContent: "center",
   },
   jobFilterContainer: {
     flexDirection: "row",
     gap: 8,
     padding: 2,
+    marginHorizontal: 20,
     overflow: "scroll",
   },
   jobFilterButton: {
@@ -36,18 +48,498 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "white",
     borderColor: "black",
-    borderWidth: 1, // Add this if you want a border
-    padding: 8, // Adjust as needed for your desired padding
-    marginVertical: 8, // Adjust as needed
+    borderWidth: 1, 
+    padding: 8, 
+    marginVertical: 8,
     borderRadius: 4,
-    color: "black", // Add text color
+    color: "black", 
   },
+  titleContainer: {   // for the Interview Panel, Notification/s, Current Openings
+    marginHorizontal: 20,
+    top: 50,
+ },
+ titleContainer2: { // for current openings header
+  marginHorizontal: 20,
+  top: -10,
+ },
+ titleContainer3: { // for current openings header (design & creative)
+  marginHorizontal: 20,
+  top: 50,
+ },
+ titleContainer4: { // for sales and marketers header
+  marginHorizontal: 8,
+  top: 25,
+ },
+ titleContainer4: { // for writing and translation header
+  marginHorizontal: 8,
+  top: 25,
+ },
+ lineContainer: { // Notification
+  position: 'relevant',
+  top: 22,
+  left: 20,
+  marginRight: 355,
+},
+lineContainer2: {  // Home
+  position: 'relevant',
+  top: -55,
+  left: 20,
+  marginRight: 370,
+},
+lineContainer3: { // Profile
+  position: 'relevant',
+  top: -30,
+  marginRight: 316,
+},
+lineContainer4: { // Skills under profile module
+  position: 'relevant',
+  top: 30,
+  marginRight: 316,
+},
+lineContainer5: { // uploaded files
+  position: 'relevant',
+  top: 85,
+  marginRight: 316,
+},
+line: {
+  height: 5,
+  backgroundColor: 'black',
+},
 });
 
 export const jobs = StyleSheet.create({
-  title: {
-    fontSize: 16,
+  columnContainer: {  // jobs under design & creative
+      flexDirection: 'row',
+      left: -15,
+  },
+  columnContainer2: { // jobs under sales and marketers
+    flexDirection: 'row',
+    left: -10,
+    top: 30,
+  },
+  columnContainer3: { // jobs under writing and translation
+    flexDirection: 'row',
+    left: -10,
+    top: 30,
+  },
+  column: {   // more buttons for design & creative
+    flex: 1,
+    marginTop: 19.5,
+    right: 50,
+  },
+  column2: {  // more buttons for sales and marketers
+    flex: 1,
+    marginTop: 80,
+  },
+  column3: {  // more buttons for writing and translation
+    flex: 1,
+    marginTop: 62,
+  },
+  title: {  // header Notification
+    fontSize: 20,
     textTransform: "uppercase",
     color: "#000",
+    fontWeight: "bold",
   },
+  list: {
+    flexDirection: 'column',
+    fontSize: 14,
+    textTransform: "capitalize",
+    color: "#000",
+    // paddingTop: "0.5rem",
+    padding: 8,
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    // marginBottom: 20,
+    // rowGap: 10,
+    // columnGap: 10,
+  },
+  moreButton: {
+    flexDirection: 'column',
+    paddingTop: ".2rem",
+    fontSize: 10,
+    textTransform: "lowercase",
+    backgroundColor: "#F5F5F5",
+    borderRadius: 20,
+    color: '#555',
+    textAlign: 'center',
+    width: 75,
+    height: 18,
+    marginBottom: 16.5,
+ },
 });
+ export const notif = StyleSheet.create({
+  mainContainer: {
+    flexDirection:'row',
+    borderWidth: "0.05rem",
+    borderRadius: 10,
+    borderColor: 'lightgray',
+    paddingLeft: 10,
+    height: 170,
+    marginVertical: 5,
+    marginHorizontal: 40,
+    top: 65,
+  },
+  circle: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: "lightgray",
+    top: 10,
+  },
+  infoContainer: {
+    flex: 1,
+    alignContent: 'flex-start',
+    top: 20,
+    left: 8,
+    paddingRight: 40,
+  },
+  nameStyle: {
+    fontSize: 12,
+    color: "black",
+    fontWeight: "bold",
+  },
+  position: {
+    fontSize: 11,
+    color: "black",
+  },
+  description: {
+    fontSize: 12,
+    paddingTop: "1rem",
+    alignItems: 'flex-start',
+    flexWrap: 'wrap',
+  },
+  fitToText: {
+    flexDirection: 'row',
+    position: 'absolute',
+    top: 90,
+    right: -20,
+  },
+  bold: {
+    fontWeight: "bold",
+  },
+  button: {
+    fontSize: 10,
+    textTransform: "capitalize",
+    backgroundColor: "black",
+    textAlign: 'center',
+    paddingHorizontal: 16, 
+    paddingVertical: 8,
+    borderRadius: 20,
+    color: "white",
+    marginHorizontal: 60,
+    marginVertical: 12,
+  },
+  button2: {
+    fontSize: 10,
+    textTransform: "capitalize",
+    backgroundColor: "black",
+    paddingHorizontal: 16, 
+    paddingVertical: 8,
+    borderRadius: 20,
+    color: "white",
+    marginHorizontal: 60,
+    marginVertical: 12,
+  },
+  button3: {
+    fontSize: 10,
+    textTransform: "capitalize",
+    backgroundColor: "black",
+    textAlign: 'center',
+    paddingHorizontal: 16, 
+    paddingVertical: 8,
+    borderRadius: 20,
+    color: "white",
+    marginHorizontal: 60,
+    marginVertical: 12,
+  },
+  button4: {
+    fontSize: 10,
+    textTransform: "capitalize",
+    backgroundColor: "black",
+    textAlign: 'center',
+    paddingHorizontal: 16, 
+    paddingVertical: 8,
+    borderRadius: 20,
+    color: "white",
+    marginHorizontal: 60,
+    marginVertical: 12,
+  }
+ });
+ export const notif2 = StyleSheet.create ({
+    mainContainer: {
+      height: 'auto',
+      marginTop: 160,
+      flexDirection: 'row',
+    },
+    logoContainer: {  // logo inside message container
+      height: 'auto',
+      paddingHorizontal: 10,
+      alignSelf: 'center',
+    },
+    messageContainer: {
+      height: 'auto',
+      flexDirection: 'column',
+      flexWrap: 'wrap',
+      alignItems: 'flex-start',
+      maxWidth: '100%',
+      width: '100%',
+    },
+    mainContainer2: {
+      marginTop: "-.10rem",
+      flexDirection:'row',
+      borderWidth: "0.05rem", //remove later
+      height: 13,
+    },
+    message: {
+      fontSize: 12,
+      paddingRight: 110,
+      marginBottom: 25,
+    },
+    id: { 
+      fontSize: 12,
+      paddingRight: 100,
+    },
+    pin: {
+      fontSize: 12,
+      paddingRight: 100,
+    },
+    link: {
+      fontSize: 12,
+      paddingRight: 100,
+      marginBottom: 25,
+    },
+    click: { 
+      fontSize: 12,
+      paddingRight: 100,
+      textAlign: 'center',
+      top: 30,
+    },
+    mainContainer3: {   // for the yes and no buttons
+      marginTop: 50,
+      flexDirection: 'column',
+      columnGap: 50,
+      marginHorizontal: 70,
+      },
+   column: {
+      flexDirection:'row',
+      columnGap: 20,
+    },
+    greetingTitle: {   // greetings
+      fontSize: 13,
+      fontWeight: 'bold',
+      marginBottom: 20,
+    },
+    logo: {     //notification logo
+      height: 80,
+      width: 70,
+      resizeMode: "contain", 
+      // marginTop: "4rem",
+      // paddingLeft: "1rem",
+ },
+    button: {   // yes button
+      paddingBlock: ".4rem",
+      flexDirection:'row',
+      fontSize: 10,
+      backgroundColor: "black",
+      padding: 20, 
+      borderRadius: 20,
+      borderWidth: "0.05rem",
+      borderBlockColor: "black",
+      color: "white",
+    },
+    button2: {  // no button
+      paddingBlock: ".4rem",
+      flexDirection:'row',
+      fontSize: 10,
+      backgroundColor: "white",
+      padding: 20, 
+      borderRadius: 20,
+      borderBlockColor: "black",
+      borderWidth: "0.05rem",
+      color: "black",
+      // alignContent: 'flex-end',
+      // alignSelf: 'flex-end',
+    },
+    button3: {  // for submit response
+      fontSize: 13,
+      color: "#1E90FF",
+      fontWeight: 'bold',
+      top: 80,
+      right: -180,
+    },
+    backButton: {
+      fontSize: 17,
+      color: 'black',
+      textTransform: 'uppercase',
+      fontWeight: "bold",
+      position: 'absolute',
+      left: -40,
+      top: -613,
+    }
+   
+  });
+
+  export const profileContainer = StyleSheet.create({
+    resumeContainer: {   // for the resume label
+      height: 50,
+      top: 310,
+      marginHorizontal: 20,
+    },
+    uploadContainer: {  // for the upload previous works label
+      height: 50,
+      top: 295,
+      marginHorizontal: 20,
+    },
+    choosefileContainer: {  // under resume
+      borderWidth: 2, //remove later
+      borderColor: 'black',
+      height: 30,
+      top: 300,
+      marginHorizontal: 20,
+      flexDirection: 'row',
+      columnGap: 20,
+      borderRightWidth: 0,
+      borderTopWidth: 0,
+    },
+    choosefileContainer2: {  // under upload
+      borderWidth: 2,
+      borderColor: 'black',
+      height: 30,
+      top: 285,
+      marginHorizontal: 20,
+      flexDirection: 'row',
+      columnGap: 20,
+      borderRightWidth: 0,
+      borderTopWidth: 0,
+    },
+    fileInputButton: {
+      padding: 10,
+      backgroundColor: 'black',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    fileNamePlaceholder: {
+      marginTop: 3,
+    },
+    headerContainer: {  // for the header "Profile"
+      flex: 1,
+      top: 48,
+      marginHorizontal: 20,
+    },
+    headerContainer2: {  // for the header "Skills"
+      flex: 1,
+      top: 26,
+    },
+    headerContainer3: { // for the header "uploaded files"
+      flex: 1,
+      top: 83,
+    },
+    header: {   // for the header "Profile"
+      fontSize: 20,
+      color: "#000",
+      textTransform: "uppercase",
+      fontWeight: "bold",
+    },
+    applicantMain: {  // main container for the the applicant under profile module
+      top: 10,
+      height: 109,
+      width: 'auto',
+      flexDirection: 'row',
+      columnGap: 15,
+    },
+    applicantdetails: { // container for the applicant information beside the image container
+      flex: 1,
+    },
+      skillsContainer: {    // under profile module
+      flexDirection: 'row', 
+      flexWrap: 'wrap', 
+      top: 45,
+      },
+      skillsList: {  
+        backgroundColor: '#f0f0f0', 
+      borderRadius: 20,
+      marginHorizontal: 5,
+      marginVertical: 5,
+      paddingVertical: 5,
+      paddingHorizontal: 10,
+      top: 20,
+    },
+      text: {   // text style for the list buttons of skills under skills in profile module
+        textTransform: 'uppercase',
+        color: 'gray',
+        fontSize: 12,
+        fontWeight: '500',
+      },
+        fileText: {
+          fontSize: 12,
+          textTransform: "uppercase",
+          textAlign: 'left',
+          marginTop: "1rem",
+          marginBottom: ".5rem",
+          fontWeight: '600',
+        },
+      fileContainer: {  //  resume under uploaded files
+        flexDirection:'row',
+        height: 20,
+      },
+      imageContainer: { // picture under Profile section
+      resizeMode: 'cover',
+      borderRadius: 5,
+      width: 100,
+      height: 105,
+      },
+      imageStyle: { // picture under uploaded files
+        resizeMode: 'contain',
+        flex: 1,
+      borderRadius: 20,
+      },
+      imageContainer2: {  // picture under Uploaded Files section
+        flex: 1,
+        height: 100,
+        width: 'auto',
+        top: 300,
+        paddingLeft: 20,
+        paddingRight: 20,
+      marginBottom: 300,
+      },
+      buttonContainer: {  // for "edit profile"
+        top: 40,
+        height: 90,
+      },
+      buttonStyle: {  // for "choose file"
+        fontSize: 15,
+        fontWeight: '500',
+        color: 'white',
+      },
+      buttonStyle2: { // for "edit profile"
+        color: 'white',
+        fontSize: 18,
+        textTransform: 'uppercase',
+        fontWeight: '500',
+        marginBottom: 30,
+        marginLeft: 220,paddingTop: 10,
+        paddingLeft: 20,
+        paddingRight: 20,
+        paddingBottom: 10,
+        alignSelf: 'center',
+        backgroundColor: 'black',
+      },
+      applicantName: {
+        fontWeight: 'bold',
+        fontSize: 17,
+        textTransform: 'capitalize',
+        top: 4,
+      },
+      applicantRole: {
+        fontSize: 13,
+        textTransform: 'capitalize',
+      },
+      applicantContacts: {
+        fontSize: 14,
+        top: 15,
+     
+      }
+
+  })
+ 
